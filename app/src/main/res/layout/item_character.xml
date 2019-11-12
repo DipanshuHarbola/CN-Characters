@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="310dp"
+    android:background="@android:color/white"
+    android:layout_margin="@dimen/_10DP">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/baseView"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_136DP"
+        android:background="@color/colorAccent"
+        app:elevation="@dimen/_5DP"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/charImage"
+        android:layout_width="@dimen/_180DP"
+        android:layout_height="@dimen/_220DP"
+        android:adjustViewBounds="true"
+        android:src="@drawable/blossom"
+        android:transitionName="charImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/charName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16DP"
+        android:layout_marginTop="@dimen/_8DP"
+        android:layout_marginEnd="@dimen/_16DP"
+        tools:text="Blossom"
+        android:textSize="@dimen/_28SP"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:transitionName="charName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/charImage" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/charSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_17DP"
+        android:layout_marginEnd="@dimen/_16DP"
+        tools:text="Powerpuff Girls"
+        android:textSize="@dimen/_12SP"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:transitionName="charSubT"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/charName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

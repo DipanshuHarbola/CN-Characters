@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:background="#E57373"
+    tools:context=".view.CharacterDetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/closeView"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8DP"
+            android:layout_marginTop="@dimen/_8DP"
+            android:text="@string/btn_close"
+            android:textColor="@android:color/black"
+            app:icon="@drawable/ic_close"
+            app:iconTint="@android:color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/charImage"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_250DP"
+            android:layout_marginTop="@dimen/_8DP"
+            android:src="@drawable/blossom"
+            android:transitionName="charImg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/closeView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/charName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16DP"
+            tools:text="Blossom"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_26SP"
+            android:textStyle="bold"
+            android:transitionName="charName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/charImage" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/charSubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16DP"
+            tools:text="Powerpuff Girls"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_17SP"
+            android:textStyle="bold"
+            android:transitionName="charSubT"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/charName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/charDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16DP"
+            android:layout_marginTop="@dimen/_4DP"
+            android:layout_marginEnd="@dimen/_16DP"
+            tools:text="Powerpuff Girls"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_15SP"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/charSubTitle" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/charClips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16DP"
+            android:layout_marginTop="@dimen/_10DP"
+            android:text="@string/label_clips"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_18SP"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/charDesc" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/clipRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16DP"
+            android:layout_marginTop="@dimen/_6DP"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layoutAnimation="@anim/layout_animation_slide_right"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/charClips" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CN Characters</string>
+    <string name="btn_close">Close</string>
+    <string name="app_title">Characters</string>
+    <string name="btn_facebook">FaceBook</string>
+    <string name="btn_twitter">Twitter</string>
+    <string name="label_clips">Clips</string>
+</resources>
